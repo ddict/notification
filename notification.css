@@ -1,17 +1,16 @@
-
-#notifications {
+#ddict_notifications {
   position: fixed;
   top: 10px;
   right: 15px;
   z-index: 99999;
 }
 
-#notifications li {
+#ddict_notifications li {
   margin-bottom: 5px;
   list-style: none;
 }
 
-.notification {
+.ddict_notification {
   position: relative;
   max-width: 600px;
   min-width: 250px;
@@ -20,23 +19,23 @@
   z-index: 100;
 }
 
-.notification .content {
+.ddict_notification .content {
   padding: 15px 20px;
 }
 
-.notification .title {
+.ddict_notification .title {
   margin: 0 0 5px 0;
   font-size: 16px;
   font-weight: normal;
 }
 
-.notification p {
+.ddict_notification p {
   margin: 0;
   padding: 0;
   font-size: 16px;
 }
 
-.notification .close {
+.ddict_notification .close {
   position: absolute;
   top: 5px;
   right: 10px;
@@ -45,21 +44,21 @@
   display: none;
 }
 
-.notification.closable .close {
+.ddict_notification.closable .close {
   display: block;
 }
 
-.notification .close:hover {
+.ddict_notification .close:hover {
   color: black;
 }
 
-.notification .close:active {
+.ddict_notification .close:active {
   margin-top: 1px;
 }
 
 /* close */
 
-.notification .close {
+.ddict_notification .close {
   position: absolute;
   top: 3px;
   right: 10px;
@@ -72,37 +71,37 @@
 
 /* slide */
 
-.notification.slide {
+.ddict_notification.slide {
   -webkit-transition: opacity 300ms, top 300ms;
   -moz-transition: opacity 300ms, top 300ms;
 }
 
-.notification.slide.hide {
+.ddict_notification.slide.hide {
   opacity: 0;
   top: -500px;
 }
 
 /* fade */
 
-.notification.fade {
+.ddict_notification.fade {
   -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
 }
 
-.notification.fade.hide {
+.ddict_notification.fade.hide {
   opacity: 0;
 }
 
 /* scale */
 
-.notification.scale {
+.ddict_notification.scale {
   -webkit-transition: -webkit-transform 300ms;
   -moz-transition: -moz-transform 300ms;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
 }
 
-.notification.scale.hide {
+.ddict_notification.scale.hide {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
 }

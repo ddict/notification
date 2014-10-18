@@ -17,7 +17,7 @@ exports = module.exports = notify;
  * Notification list.
  */
 
-var list = dom('<ul id="notifications">');
+var list = dom('<ul id="ddict_notifications">');
 
 /**
  * Append to body when it exists.
