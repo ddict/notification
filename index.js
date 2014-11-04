@@ -5,7 +5,6 @@
 
 var dom = require('dom');
 var Emitter = require('emitter');
-var onBody = require('on-body');
 
 /**
  * Expose `notify`.
@@ -20,14 +19,6 @@ exports = module.exports = notify;
 var list = dom('<ul id="ddict_notifications">');
 
 /**
- * Append to body when it exists.
- */
-
-onBody(function (body) {
-  list.appendTo(body);
-});
-
-/**
  * Return a new `Notification` with the given
  * (optional) `title` and `msg`.
  *
@@ -38,6 +29,10 @@ onBody(function (body) {
  */
 
 function notify(title, msg){
+  if(!dom('#ddict_notifications').length) {
+    list.appendTo('body');
+  }
+
   switch (arguments.length) {
     case 2:
       return new Notification({ title: title, message: msg })
